@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AegisChain | Hybrid Web3 Supply Intelligence</title>
+    <!-- Google Fonts for a modern, clean typography -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&display=swap" rel="stylesheet">
+    <!-- FontAwesome for scalable UI icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Link to the upcoming CSS file -->
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Animated Background Elements -->
+    <div class="bg-shape shape-1"></div>
+    <div class="bg-shape shape-2"></div>
+    <div class="bg-shape shape-3"></div>
+
+    <div class="app-container">
+        <!-- Sidebar Navigation -->
+        <aside class="sidebar glass-panel">
+            <div class="brand">
+                <i class="fa-solid fa-shield-halved brand-icon pulse-animation"></i>
+                <h1>Aegis<br><span>Chain</span></h1>
+            </div>
+            
+            <nav class="nav-menu">
+                <button class="nav-btn active" data-tab="tab-overview">
+                    <i class="fa-solid fa-chart-line"></i> Platform Overview
+                </button>
+                <button class="nav-btn" data-tab="tab-register">
+                    <i class="fa-solid fa-box-open"></i> Register Batch
+                </button>
+                <button class="nav-btn" data-tab="tab-transit">
+                    <i class="fa-solid fa-truck-fast"></i> Log Transit
+                </button>
+                <button class="nav-btn" data-tab="tab-audit">
+                    <i class="fa-solid fa-microchip"></i> AI Audit & Verify
+                </button>
+            </nav>
+
+            <div class="network-status">
+                <div class="status-indicator online"></div>
+                <span>Web3 Sepolia Connected</span>
+            </div>
+        </aside>
+
+        <!-- Main Content Area -->
+        <main class="main-content">
+            
+            <!-- TAB 1: Platform Overview & Tech Stack (The "First Impression" View) -->
+            <section id="tab-overview" class="tab-content active animate-fade">
+                <header class="section-header">
+                    <h2>Welcome to AegisChain</h2>
+                    <p>Next-generation pharmaceutical provenance utilizing immutable ledgers and AI-driven telemetry.</p>
+                </header>
+
+                <div class="grid-layout">
+                    <div class="card glass-panel stat-card">
+                        <i class="fa-solid fa-link"></i>
+                        <div class="stat-info">
+                            <h3>Immutable Provenance</h3>
+                            <p>Smart contracts ensure tampering is cryptographically impossible.</p>
+                        </div>
+                    </div>
+                    <div class="card glass-panel stat-card">
+                        <i class="fa-solid fa-temperature-arrow-down"></i>
+                        <div class="stat-info">
+                            <h3>Cold-Chain Integrity</h3>
+                            <p>Continuous thermal telemetry monitoring.</p>
+                        </div>
+                    </div>
+                    <div class="card glass-panel stat-card">
+                        <i class="fa-solid fa-robot"></i>
+                        <div class="stat-info">
+                            <h3>AI Threat Detection</h3>
+                            <p>Automated anomaly detection across transit histories.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="tech-stack-container glass-panel mt-2">
+                    &nbsp;<br><h3>Hybrid Architecture Stack</h3>
+                    <div class="tech-badges">
+                        <span class="badge web3"><i class="fa-brands fa-ethereum"></i> Solidity (Web3)</span>
+                        <span class="badge backend"><i class="fa-brands fa-python"></i> FastAPI (Python)</span>
+                        <span class="badge ai"><i class="fa-solid fa-brain"></i> OpenAI / Nemotron</span>
+                        <span class="badge frontend"><i class="fa-brands fa-html5"></i> HTML5/CSS3/JS</span>
+                    </div>
+                </div>
+            </section>
+
+            <!-- TAB 2: Register Batch -->
+            <section id="tab-register" class="tab-content hidden animate-fade">
+                <header class="section-header">
+                    <h2>Register Medicine Batch</h2>
+                    <p>Mint a new pharmaceutical batch onto the blockchain.</p>
+                </header>
+                <div class="form-container glass-panel">
+                    <form id="form-register">
+                        <div class="input-group">
+                            <label for="reg-batch-id">Batch ID (Alphanumeric)</label>
+                            <input type="text" id="reg-batch-id" required placeholder="e.g., VAX-2026-001">
+                        </div>
+                        <div class="input-group">
+                            <label for="reg-med-name">Medicine Name</label>
+                            <input type="text" id="reg-med-name" required placeholder="e.g., Synthacillin 500mg">
+                        </div>
+                        <div class="input-group">
+                            <label for="reg-data-hash">Documents Hash (IPFS/SHA-256)</label>
+                            <input type="text" id="reg-data-hash" required placeholder="QmHash...">
+                        </div>
+                        <button type="submit" class="btn-primary">
+                            <i class="fa-solid fa-fingerprint"></i> Commit to Ledger
+                        </button>
+                    </form>
+                    <div id="reg-feedback" class="feedback-msg"></div>
+                </div>
+            </section>
+
+            <!-- TAB 3: Log Transit -->
+            <section id="tab-transit" class="tab-content hidden animate-fade">
+                <header class="section-header">
+                    <h2>Log Transit Checkpoint</h2>
+                    <p>Record location and environmental telemetry during transit.</p>
+                </header>
+                <div class="form-container glass-panel">
+                    <form id="form-transit">
+                        <div class="input-group">
+                            <label for="trans-batch-id">Batch ID</label>
+                            <input type="text" id="trans-batch-id" required placeholder="Enter existing Batch ID">
+                        </div>
+                        <div class="input-group">
+                            <label for="trans-location">Current Location</label>
+                            <input type="text" id="trans-location" required placeholder="e.g., Port of Jakarta">
+                        </div>
+                        <div class="input-group-row">
+                            <div class="input-group">
+                                <label for="trans-temp">Temperature (°C)</label>
+                                <input type="number" id="trans-temp" step="0.1" required placeholder="e.g., 4.2">
+                            </div>
+                            <div class="input-group">
+                                <label for="trans-hum">Humidity (%)</label>
+                                <input type="number" id="trans-hum" step="0.1" placeholder="e.g., 45">
+                            </div>
+                        </div>
+                        <button type="submit" class="btn-primary">
+                            <i class="fa-solid fa-satellite-dish"></i> Broadcast Telemetry
+                        </button>
+                    </form>
+                    <div id="trans-feedback" class="feedback-msg"></div>
+                </div>
+            </section>
+
+            <!-- TAB 4: AI Audit & Verify -->
+            <section id="tab-audit" class="tab-content hidden animate-fade">
+                <header class="section-header">
+                    <h2>AI Audit & Provenance Verification</h2>
+                    <p>Retrieve immutable history and run AI anomaly detection.</p>
+                </header>
+                
+                <div class="search-bar glass-panel">
+                    <input type="text" id="audit-batch-id" placeholder="Enter Batch ID to audit...">
+                    <button id="btn-audit" class="btn-secondary">
+                        <i class="fa-solid fa-magnifying-glass"></i> Analyze
+                    </button>
+                </div>
+
+                <!-- Results Area (Populated by JS) -->
+                <div id="audit-results" class="audit-results-container hidden">
+                    <!-- AI Assessment Box -->
+                    <div id="ai-assessment-box" class="glass-panel assessment-box">
+                        <div class="assessment-header">
+                            <h3><i class="fa-solid fa-robot"></i> AI Engine Verdict</h3>
+                            <span id="ai-status-badge" class="status-badge">Safe</span>
+                        </div>
+                        <p id="ai-summary-text" class="ai-summary">Analyzing transit telemetry...</p>
+                        <div class="assessment-metrics">
+                            <div class="metric"><span id="ai-confidence">0</span>% Confidence</div>
+                            <div class="metric"><span id="ai-anomalies">0</span> Anomalies</div>
+                        </div>
+                    </div>
+
+                    <!-- Immutable Timeline -->
+                    <h3 class="timeline-title">Immutable Transit Timeline</h3>
+                    <div id="transit-timeline" class="timeline">
+                        <!-- Timeline items injected here via JS -->
+                    </div>
+                </div>
+            </section>
+
+        </main>
+    </div>
+
+    <!-- Link to the dynamic Javascript logic -->
+    <script src="app.js"></script>
+</body>
+</html>
