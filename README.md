@@ -3,6 +3,8 @@
 
 Global supply chains suffer from a lack of verifiable transparency, fragmented data silos, and an inability to detect environmental or logistical tampering in real time. Traditional tracking mechanisms rely on centralized databases that are vulnerable to retroactive alterations, making it difficult to verify the integrity of sensitive cargo such as pharmaceuticals or high-value components during transit.
 
+<img width="1329" height="505" alt="گعیس" src="https://github.com/user-attachments/assets/8fcb4a04-f202-43d7-9c53-778a73941bd3" />
+
 ## Track Alignment
 
 AegisChain aligns with Web3 and Artificial Intelligence integration tracks by combining decentralized ledger immutability with automated machine learning analytics. It bridges off-chain sensor telemetry and on-chain verification to establish an automated, tamper-proof audit framework.
@@ -16,6 +18,8 @@ Supply chain networks lack cryptographic proof of custody and condition monitori
 ### Solution
 
 AegisChain provides a hybrid architecture that logs immutable batch registrations and transit checkpoints on the Ethereum blockchain via smart contracts, while a backend intelligence engine continuously evaluates telemetry data against historical baselines to flag logistical anomalies.
+
+<img width="1333" height="482" alt="ai au" src="https://github.com/user-attachments/assets/092ef484-e496-488f-8f60-e23f1320d339" />
 
 ### Target Users
 
@@ -37,6 +41,8 @@ The platform eliminates reliance on mutable central databases, provides automate
 * Developed a responsive, low-latency frontend interface providing real-time timeline rendering and verification audits without page reloads.
 
 ---
+
+<img width="1130" height="616" alt="log" src="https://github.com/user-attachments/assets/04ffe707-472a-4443-ab34-c48a280044b1" />
 
 ## Tech Stack
 
